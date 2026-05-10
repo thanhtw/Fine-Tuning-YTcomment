@@ -1,6 +1,8 @@
 name: ytcomment-hf
 channels:
   - defaults
+variables:
+  PYTHONNOUSERSITE: "1"
 dependencies:
   - python=3.10
   - pip
