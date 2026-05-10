@@ -16,9 +16,12 @@ from transformers import (
     set_seed,
 )
 
+from ytcomment_finetune.comparison import save_model_comparison
 from ytcomment_finetune.config import AppConfig
 from ytcomment_finetune.data import build_dataset, build_label_encoder, load_examples
+from ytcomment_finetune.lexicon import run_corpus_baseline
 from ytcomment_finetune.reporting import build_dataset_summary, save_report, slugify_model_name, summarize_numeric
+from ytcomment_finetune.visualization import generate_visualizations
 
 
 def tokenize_dataset(dataset, tokenizer, max_length: int):
@@ -104,7 +107,7 @@ def prepare_training_run(config: AppConfig):
     return dataset, label_encoder, dataset_summary
 
 
-def fine_tune_model(model_name: str, dataset, label_encoder, dataset_summary, config: AppConfig) -> None:
+def fine_tune_model(model_name: str, dataset, label_encoder, dataset_summary, config: AppConfig) -> dict[str, object]:
     print(f"\nStarting fine-tuning for: {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenized_dataset = tokenize_dataset(dataset, tokenizer, config.max_length)
@@ -187,9 +190,18 @@ def fine_tune_model(model_name: str, dataset, label_encoder, dataset_summary, co
         best_checkpoint=trainer.state.best_model_checkpoint,
         best_metric=trainer.state.best_metric,
     )
+    return {
+        "display_name": model_name,
+        "method_type": "transformer",
+        "metrics": serializable_metrics,
+        "output_dir": model_output_dir,
+    }
 
 
 def run_training(config: AppConfig) -> None:
     dataset, label_encoder, dataset_summary = prepare_training_run(config)
+    experiment_results = [run_corpus_baseline(dataset, label_encoder, dataset_summary, config)]
     for model_name in config.models:
-        fine_tune_model(model_name, dataset, label_encoder, dataset_summary, config)
+        experiment_results.append(fine_tune_model(model_name, dataset, label_encoder, dataset_summary, config))
+    save_model_comparison(config.output_dir, experiment_results)
+    generate_visualizations(config.output_dir, experiment_results)

@@ -283,8 +283,8 @@ def save_markdown_report(
 - Train label distribution: `{dataset_summary['label_distribution']['train']}`
 - Test label distribution: `{dataset_summary['label_distribution']['test']}`
 - Character length summary (all): `{dataset_summary['text_length_characters']['all']}`
-- Token length summary (train): `{token_length_summary['train']}`
-- Token length summary (test): `{token_length_summary['test']}`
+- Representation summary (train): `{token_length_summary['train']}`
+- Representation summary (test): `{token_length_summary['test']}`
 
 ## 3. Overall Test Metrics
 
