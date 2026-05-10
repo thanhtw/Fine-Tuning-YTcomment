@@ -2,5 +2,15 @@
 .venv/
 __pycache__/
 *.pyc
-outputs/
-
+.pytest_cache/
+.mypy_cache/
+.matplotlib/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.onnx
+*.safetensors
+outputs/**/checkpoints/
+outputs/**/model/
