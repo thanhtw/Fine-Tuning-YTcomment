@@ -3,7 +3,7 @@
   "train_size": 2329,
   "test_size": 583,
   "metrics": {
-    "eval_loss": 1.2012118101119995,
+    "eval_loss": 1.2012107372283936,
     "eval_accuracy": 0.8198970840480274,
     "eval_precision_weighted": 0.8120062179191581,
     "eval_recall_weighted": 0.8198970840480274,
@@ -12,9 +12,9 @@
     "eval_recall_macro": 0.6034144315474239,
     "eval_f1_macro": 0.6276312071766618,
     "eval_support_total": 583.0,
-    "eval_runtime": 0.455,
-    "eval_samples_per_second": 1281.401,
-    "eval_steps_per_second": 160.45,
+    "eval_runtime": 0.4555,
+    "eval_samples_per_second": 1280.031,
+    "eval_steps_per_second": 160.278,
     "epoch": 10.0
   },
   "labels": {
@@ -72,7 +72,7 @@
     }
   },
   "config": {
-    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/YTcomment.xlsx",
+    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/NewYTcomment.xlsx",
     "corpus_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/opinion_word_utf8.csv",
     "output_dir": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/outputs",
     "models": [

@@ -12,9 +12,9 @@
     "eval_recall_macro": 0.5589437558747021,
     "eval_f1_macro": 0.5522795084859956,
     "eval_support_total": 583.0,
-    "eval_runtime": 0.4761,
-    "eval_samples_per_second": 1224.652,
-    "eval_steps_per_second": 153.344,
+    "eval_runtime": 0.4769,
+    "eval_samples_per_second": 1222.451,
+    "eval_steps_per_second": 153.068,
     "epoch": 10.0
   },
   "labels": {
@@ -72,7 +72,7 @@
     }
   },
   "config": {
-    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/YTcomment.xlsx",
+    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/NewYTcomment.xlsx",
     "corpus_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/opinion_word_utf8.csv",
     "output_dir": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/outputs",
     "models": [

@@ -3,7 +3,7 @@
 ## 1. Experimental Setup
 
 - Model: `hfl/chinese-roberta-wwm-ext`
-- Data file: `/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/YTcomment.xlsx`
+- Data file: `/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/NewYTcomment.xlsx`
 - Random seed: `42`
 - Train/test split: `2329` / `583`
 - Epochs: `10`

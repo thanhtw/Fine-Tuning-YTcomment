@@ -67,7 +67,7 @@
     }
   },
   "config": {
-    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/YTcomment.xlsx",
+    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/NewYTcomment.xlsx",
     "corpus_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/opinion_word_utf8.csv",
     "output_dir": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/outputs",
     "models": [
