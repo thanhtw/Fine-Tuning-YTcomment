@@ -92,7 +92,7 @@ def classify_with_corpus(
     matches = matcher.find_matches(text)
     if not matches:
         return (
-            "Neutral",
+            "neutral",
             0.0,
             {
                 "matches": [],
@@ -112,15 +112,15 @@ def classify_with_corpus(
     invalid_votes = sum(entry.not_word for entry in matches)
 
     if total_score > positive_threshold:
-        label = "Positive"
+        label = "positive"
     elif total_score < negative_threshold:
-        label = "Negative"
+        label = "negative"
     elif pos_votes > neg_votes and pos_votes > neu_votes:
-        label = "Positive"
+        label = "positive"
     elif neg_votes > pos_votes and neg_votes > neu_votes:
-        label = "Negative"
+        label = "negative"
     else:
-        label = "Neutral"
+        label = "neutral"
 
     vote_total = pos_votes + neg_votes + neu_votes + invalid_votes
     vote_confidence = max(pos_votes, neg_votes, neu_votes, invalid_votes) / vote_total if vote_total else 0.0

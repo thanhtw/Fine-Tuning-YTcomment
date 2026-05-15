@@ -67,7 +67,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--empty-label",
-        default="Neutral",
+        default="neutral",
         help="Fallback label for rows whose text becomes empty after preprocessing.",
     )
     parser.add_argument(

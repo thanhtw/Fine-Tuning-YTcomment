@@ -1,0 +1,143 @@
+{
+  "model_name": "bert-base-chinese",
+  "train_size": 4751,
+  "test_size": 1188,
+  "metrics": {
+    "eval_loss": 0.9776028990745544,
+    "eval_accuracy": 0.8291245791245792,
+    "eval_precision_weighted": 0.8290404106006943,
+    "eval_recall_weighted": 0.8291245791245792,
+    "eval_f1_weighted": 0.8290817427372338,
+    "eval_precision_macro": 0.8301099174559421,
+    "eval_recall_macro": 0.8299652106442096,
+    "eval_f1_macro": 0.8300368808556522,
+    "eval_support_total": 1188.0,
+    "eval_runtime": 1.0739,
+    "eval_samples_per_second": 1106.223,
+    "eval_steps_per_second": 138.743,
+    "epoch": 10.0
+  },
+  "labels": {
+    "0": "negative",
+    "1": "neutral",
+    "2": "positive"
+  },
+  "dataset_summary": {
+    "total_examples": 5939,
+    "train_size": 4751,
+    "test_size": 1188,
+    "split_ratio": {
+      "train": 0.8,
+      "test": 0.2
+    },
+    "label_distribution": {
+      "all": {
+        "negative": 1327,
+        "neutral": 1886,
+        "positive": 2726
+      },
+      "train": {
+        "negative": 1061,
+        "neutral": 1509,
+        "positive": 2181
+      },
+      "test": {
+        "negative": 266,
+        "neutral": 377,
+        "positive": 545
+      }
+    },
+    "text_length_characters": {
+      "all": {
+        "count": 5939,
+        "min": 1,
+        "max": 3049,
+        "mean": 38.5553,
+        "median": 17
+      },
+      "train": {
+        "count": 4751,
+        "min": 1,
+        "max": 3049,
+        "mean": 39.6874,
+        "median": 17
+      },
+      "test": {
+        "count": 1188,
+        "min": 1,
+        "max": 2170,
+        "mean": 34.0278,
+        "median": 17.0
+      }
+    }
+  },
+  "config": {
+    "data_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/FinalYTcomment.xlsx",
+    "corpus_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/opinion_word_utf8.csv",
+    "output_dir": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/outputs",
+    "models": [
+      "bert-base-chinese",
+      "hfl/chinese-roberta-wwm-ext"
+    ],
+    "max_length": 256,
+    "batch_size": 8,
+    "epochs": 10,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "test_size": 0.2,
+    "seed": 42,
+    "corpus_positive_threshold": 0.05,
+    "corpus_negative_threshold": -0.05
+  },
+  "token_length_summary": {
+    "train": {
+      "count": 4751,
+      "min": 3,
+      "max": 256,
+      "mean": 31.1899,
+      "median": 17
+    },
+    "test": {
+      "count": 1188,
+      "min": 3,
+      "max": 256,
+      "mean": 29.5455,
+      "median": 17.0
+    }
+  },
+  "best_checkpoint": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/outputs/bert-base-chinese/checkpoints/checkpoint-2970",
+  "best_metric": 0.8290817427372338,
+  "classification_report": {
+    "negative": {
+      "precision": 0.8796992481203008,
+      "recall": 0.8796992481203008,
+      "f1-score": 0.8796992481203008,
+      "support": 266.0
+    },
+    "neutral": {
+      "precision": 0.7553191489361702,
+      "recall": 0.753315649867374,
+      "f1-score": 0.7543160690571049,
+      "support": 377.0
+    },
+    "positive": {
+      "precision": 0.8553113553113553,
+      "recall": 0.8568807339449541,
+      "f1-score": 0.8560953253895509,
+      "support": 545.0
+    },
+    "accuracy": 0.8291245791245792,
+    "macro avg": {
+      "precision": 0.8301099174559421,
+      "recall": 0.8299652106442096,
+      "f1-score": 0.8300368808556522,
+      "support": 1188.0
+    },
+    "weighted avg": {
+      "precision": 0.8290404106006943,
+      "recall": 0.8291245791245792,
+      "f1-score": 0.8290817427372338,
+      "support": 1188.0
+    }
+  }
+}
