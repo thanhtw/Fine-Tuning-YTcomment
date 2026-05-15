@@ -1,6 +1,0 @@
-{
-  "corpus_path": "/home/selab/Desktop/Thomas/Fine-Tuning-YTcomment/Data/opinion_word_utf8.csv",
-  "entry_count": 28799,
-  "positive_threshold": 0.05,
-  "negative_threshold": -0.05
-}
