@@ -21,9 +21,9 @@ from ytcomment_finetune.data import preprocess_text
 
 
 DEFAULT_INPUT_PATH = PROJECT_ROOT / "Data" / "raw_all_channels.csv"
-DEFAULT_MODEL_DIR = PROJECT_ROOT / "outputs" / "hfl__chinese-roberta-wwm-ext" / "model"
-DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "outputs" / "roberta_raw_all_channels_predictions.csv"
-DEFAULT_COMPARE_PATH = PROJECT_ROOT / "outputs" / "roberta_channel_sentiment_comparison.csv"
+DEFAULT_MODEL_DIR = PROJECT_ROOT / "outputs" / "bert-base-chinese" / "model"
+DEFAULT_OUTPUT_PATH = PROJECT_ROOT / "outputs" / "bert_raw_all_channels_predictions.csv"
+DEFAULT_COMPARE_PATH = PROJECT_ROOT / "outputs" / "bert_channel_sentiment_comparison.csv"
 DEFAULT_BATCH_SIZE = 256
 DEFAULT_MAX_LENGTH = 256
 PROGRESS_EVERY = 5000

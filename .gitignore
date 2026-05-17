@@ -16,3 +16,4 @@ outputs/**/checkpoints/
 outputs/**/model/
 Data/raw_all_channels.csv
 outputs/roberta_raw_all_channels_predictions.csv
+outputs/bert_raw_all_channels_predictions.csv
